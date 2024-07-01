@@ -1,0 +1,19 @@
+# MySQL 8.0.37 Dockerfile
+
+FROM mysql:8.0.37
+
+ENV MYSQL_ROOT_PASSWORD root
+ENV MYSQL_DATABASE=mydb
+ENV MYSQL_USER=myuser
+ENV MYSQL_PASSWORD=mypassword
+
+EXPOSE 3306
+
+# Docker Build Command
+# docker build -t mysql:8.0.37 -f Dockerfile-mysql .
+
+# Docker Run Command
+# docker run -d -p 3307:3306 --name mysql mysql:8.0.37
+
+# DBeaver Error - Public Key Retrieval is not allowed
+# Edit Connection -> Driver properties -> allowPublicKeyRetrieval [false -> true] check!
