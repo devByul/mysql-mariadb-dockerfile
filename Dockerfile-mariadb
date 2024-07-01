@@ -1,0 +1,14 @@
+# MariaDB 10.6.18 Dockerfile
+
+FROM mariadb:10.6.18
+
+ENV MYSQL_ROOT_PASSWORD root
+ENV MARIADB_MASTER_PORT 3306
+
+EXPOSE 3306
+
+# Docker Build Command
+# docker build -t mariadb:10.6.18 -f Dockerfile-mariadb .
+
+# Docker Run Command
+# docker run -d -p 3306:3306 --name mariadb mariadb:10.6.18
